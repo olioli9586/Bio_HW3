@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sequence Logo Visualization</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <h4 class="logo">Sequence Logos Visualization</h4>
+  </div>
+
+  <div class="container">
+    <div class="input-field">
+      <label for="input_seq">Input field:</label>
+      <hr>
+      <textarea rows="4" cols="50" id="input_seq" placeholder="Enter sequences here (one per line)"></textarea>
+      <p class="input-rule">* Input is a list of same length sequences separated by new lines</p>
+      <p class="input-rule">* Maximum sequence length: 16</p>
+      <p class="input-rule">* Maximum number of sequences: 16</p>
+    </div>
+
+    <div class="output">
+      <button onclick="generateLogo()">Generate Logo</button>
+      <button onclick="clearCanvas()">Clear Canvas</button> <!-- Add the button -->
+      <hr>
+      <div id="download-s">
+        <button onclick="download('jpg')">Download as JPG</button>
+        <button onclick="download('png')">Download as PNG</button>
+        <button onclick="download('svg')">Download as SVG</button>
+      </div>
+    </div>
+
+
+    <div class="spacer"></div>
+    <div id="see"></div>
+    <canvas id="bio" width="1000" height="500"></canvas>
+    <canvas id="letter" width="370" height="410" style="display: none;"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
