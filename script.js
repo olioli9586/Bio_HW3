@@ -30,6 +30,28 @@ fileInput.addEventListener('change', function(event) {
   reader.readAsText(file);
 });
 
+function addExample() {
+  var exampleSequence = `GDLGAGKTT
+GDLGAGKTT
+GPLGAGKTS
+GDLGAGKTS
+GDLGAGKTT
+GDLGAGKTT
+GEVGSGKTT
+GELGAGKTT
+GDLGAGKTI
+GNLGAGKTT
+GELGAGKTT
+GTLGAGKTT
+GDLGAGKTT
+GDLGAGKTT
+GDLGAGKTT
+GDLGAGKTT
+GDLGAGKTT`;
+
+  document.getElementById("input_seq").value = exampleSequence;
+}
+
 function generateLogo() {
   var c = document.getElementById("input_seq").value;
   var lines = c.split('\n');
